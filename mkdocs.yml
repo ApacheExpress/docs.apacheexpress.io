@@ -1,0 +1,15 @@
+site_name:        ApacheExpress
+site_url:         http://apacheexpress.io/
+site_author:      ZeeZide GmbH
+repo_url:         https://github.com/apacheexpress/
+google_analytics: [ 'UA-3266252-11', 'apacheexpress.io' ]
+  
+docs_dir:    content
+site_dir:    docs
+
+theme:       readthedocs
+
+pages:
+  - 'Introduction': 'index.md'
+  - 'About':        'about.md'
+  
