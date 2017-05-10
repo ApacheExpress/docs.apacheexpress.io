@@ -1,0 +1,34 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "ApacheExpress Documentation\n\n\nCompetently unleash value-added deliverables vis-a-vis error-free e-commerce. Objectively promote one-to-one e-business vis-a-vis standardized process improvements. Collaboratively visualize wireless leadership rather than market-driven mindshare. Seamlessly seize client-based models via pandemic channels. \n\n\nIntrinsicly customize backend partnerships whereas enabled materials. Collaboratively envisioneer B2C opportunities for quality experiences. Proactively predominate long-term high-impact users before value-added relationships.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#apacheexpress-documentation", 
+            "text": "Competently unleash value-added deliverables vis-a-vis error-free e-commerce. Objectively promote one-to-one e-business vis-a-vis standardized process improvements. Collaboratively visualize wireless leadership rather than market-driven mindshare. Seamlessly seize client-based models via pandemic channels.   Intrinsicly customize backend partnerships whereas enabled materials. Collaboratively envisioneer B2C opportunities for quality experiences. Proactively predominate long-term high-impact users before value-added relationships.", 
+            "title": "ApacheExpress Documentation"
+        }, 
+        {
+            "location": "/about/", 
+            "text": "Apache modules in Swift\n.\n\n\nContact\n\n\nHey, we love feedback. Join the mailing list, Slack channel or just drop us\nan email to tell us why this is crap (or not?).\n\n\n\n\nMailing List\n\n\nSlack\n\n\ninfo@mod-swift.org\n\n\n\n\nStatus\n\n\n\n\n\n\nConsider the version numbers.\n\n\n\n\n\n\nWe chose the traditional Swift approach:\n  Make something barely usable, though demoable,\n  and release it with a 3.0 version tag.\n  Then hope that the community kicks in and fills open spots.\n\n\n\n\n\n\nIt already has leftpad.\n\n\n\n\n\n\nWho\n\n\nmod_swift is brought to you by the\n\nZeeZide\n GmbH.\n\nImprint\n.", 
+            "title": "About"
+        }, 
+        {
+            "location": "/about/#contact", 
+            "text": "Hey, we love feedback. Join the mailing list, Slack channel or just drop us\nan email to tell us why this is crap (or not?).   Mailing List  Slack  info@mod-swift.org", 
+            "title": "Contact"
+        }, 
+        {
+            "location": "/about/#status", 
+            "text": "Consider the version numbers.    We chose the traditional Swift approach:\n  Make something barely usable, though demoable,\n  and release it with a 3.0 version tag.\n  Then hope that the community kicks in and fills open spots.    It already has leftpad.", 
+            "title": "Status"
+        }, 
+        {
+            "location": "/about/#who", 
+            "text": "mod_swift is brought to you by the ZeeZide  GmbH. Imprint .", 
+            "title": "Who"
+        }
+    ]
+}
