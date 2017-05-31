@@ -10,19 +10,15 @@ an email to tell us why this is crap (or not?).
 - [info@mod-swift.org](mailto:info@mod-swift.org)
 
 
-### Status
+### Mkdocs
 
-- Consider the version numbers.
+Built with <a href="http://www.mkdocs.org">MkDocs</a> 
+using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> 
+provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
-- We chose the traditional Swift approach:
-  Make something barely usable, though demoable,
-  and release it with a 3.0 version tag.
-  Then hope that the community kicks in and fills open spots.
-
-- It already has leftpad.
   
 ### Who
 
-mod_swift is brought to you by the
+ApacheExpress is brought to you by the
 [ZeeZide](http://zeezide.de) GmbH.
 [Imprint](http://zeezide.com/contact.html).

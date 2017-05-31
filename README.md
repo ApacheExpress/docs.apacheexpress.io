@@ -1,4 +1,7 @@
-# Documentation for ApacheExpress
+<h2>ApacheExpress Documentation
+  <img src="http://zeezide.com/img/ApexIcon1024.svg"
+       align="right" width="128" height="128" />
+</h2>
 
 This is the source repository for the ApacheExpress documentation.
 Checkout the built results over here:
