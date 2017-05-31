@@ -10,7 +10,7 @@ an email to tell us why this is crap (or not?).
 - [info@mod-swift.org](mailto:info@mod-swift.org)
 
 
-### Mkdocs
+### MkDocs
 
 Built with <a href="http://www.mkdocs.org">MkDocs</a> 
 using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> 
