@@ -8,7 +8,7 @@
   
   <meta name="author" content="ZeeZide GmbH">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>About - ApacheExpress</title>
+  <title>Routing & Middleware - ApacheExpress</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "About";
-    var mkdocs_page_input_path = "about.md";
-    var mkdocs_page_url = "/about/";
+    var mkdocs_page_name = "Routing & Middleware";
+    var mkdocs_page_input_path = "routing.md";
+    var mkdocs_page_url = "/routing/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -68,9 +68,27 @@
     <a class="" href="../install/">Installation</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../routing/">Routing & Middleware</a>
+    <a class="current" href="./">Routing & Middleware</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#routing-and-middleware">Routing and Middleware</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#middleware">Middleware</a></li>
+        
+            <li><a class="toctree-l3" href="#basic-routing">Basic Routing</a></li>
+        
+            <li><a class="toctree-l3" href="#routing-with-parameters">Routing with Parameters</a></li>
+        
+            <li><a class="toctree-l3" href="#modular-applications-and-mounting">Modular Applications and Mounting</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -88,21 +106,9 @@
     <a class="" href="../http2/">HTTP/2</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">About</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#contact">Contact</a></li>
-    
-
-    <li class="toctree-l2"><a href="#mkdocs">MkDocs</a></li>
-    
-
-    <li class="toctree-l2"><a href="#who">Who</a></li>
-    
-
-    </ul>
+    <a class="" href="../about/">About</a>
 	    </li>
           
         </ul>
@@ -127,7 +133,7 @@
     
       
     
-    <li>About</li>
+    <li>Routing & Middleware</li>
     
     <li class="wy-breadcrumbs-aside">
       <a href="http://apacheexpress.io/">
@@ -140,31 +146,42 @@
           <div role="main">
             <div class="section">
               
-                <p><center><em>Apache modules in Swift</em>.</center></p>
-<h3 id="contact">Contact</h3>
-<p>Hey, we love feedback. Join the mailing list, Slack channel or just drop us
-an email to tell us why this is crap (or not?).</p>
+                <h1 id="routing-and-middleware">Routing and Middleware</h1>
+<p>The Express framework has some nice tutorials on routing and middleware:</p>
 <ul>
-<li><a href="https://groups.google.com/d/forum/mod_swift">Mailing List</a></li>
-<li><a href="http://slack.noze.io">Slack</a></li>
-<li><a href="mailto:info@mod-swift.org">info@mod-swift.org</a></li>
+<li><a href="http://expressjs.com/en/guide/routing.html">Routing</a></li>
+<li><a href="http://expressjs.com/en/guide/writing-middleware.html">Writing middleware</a></li>
+<li><a href="http://expressjs.com/en/guide/using-middleware.html">Using middleware</a></li>
 </ul>
-<h3 id="mkdocs">MkDocs</h3>
-<p>Built with <a href="http://www.mkdocs.org">MkDocs</a> 
-using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> 
-provided by <a href="https://readthedocs.org">Read the Docs</a>.</p>
-<h3 id="who">Who</h3>
-<p>ApacheExpress is brought to you by the
-<a href="http://zeezide.de">ZeeZide</a> GmbH.
-<a href="http://zeezide.com/contact.html">Imprint</a>.</p>
+<blockquote>
+<p>WORK IN PROGRESS, STAY TUNED</p>
+</blockquote>
+<h2 id="middleware">Middleware</h2>
+<blockquote>
+<p>WORK IN PROGRESS, STAY TUNED</p>
+</blockquote>
+<h2 id="basic-routing">Basic Routing</h2>
+<blockquote>
+<p>WORK IN PROGRESS, STAY TUNED</p>
+</blockquote>
+<h2 id="routing-with-parameters">Routing with Parameters</h2>
+<blockquote>
+<p>WORK IN PROGRESS, STAY TUNED</p>
+</blockquote>
+<h2 id="modular-applications-and-mounting">Modular Applications and Mounting</h2>
+<blockquote>
+<p>WORK IN PROGRESS, STAY TUNED</p>
+</blockquote>
               
             </div>
           </div>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../templates/" class="btn btn-neutral float-right" title="Templates">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../http2/" class="btn btn-neutral" title="HTTP/2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../install/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -183,8 +200,10 @@ provided by <a href="https://readthedocs.org">Read the Docs</a>.</p>
           <a href="https://github.com/apacheexpress/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../http2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../install/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../templates/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

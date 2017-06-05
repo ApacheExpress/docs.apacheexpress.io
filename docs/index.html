@@ -63,10 +63,43 @@
     <a class="current" href=".">Introduction</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#apacheexpress-documentation">ApacheExpress Documentation</a></li>
+    <li class="toctree-l2"><a href="#apacheexpress">ApacheExpress</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#simple-example">Simple Example</a></li>
+        
+            <li><a class="toctree-l3" href="#database-access">Database Access</a></li>
+        
+        </ul>
     
 
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="install/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="routing/">Routing & Middleware</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="templates/">Templates</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="mod_dbd/">SQL Database Access</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="http2/">HTTP/2</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -109,16 +142,69 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="apacheexpress-documentation">ApacheExpress Documentation</h1>
-<p>Competently unleash value-added deliverables vis-a-vis error-free e-commerce. Objectively promote one-to-one e-business vis-a-vis standardized process improvements. Collaboratively visualize wireless leadership rather than market-driven mindshare. Seamlessly seize client-based models via pandemic channels. </p>
-<p>Intrinsicly customize backend partnerships whereas enabled materials. Collaboratively envisioneer B2C opportunities for quality experiences. Proactively predominate long-term high-impact users before value-added relationships.</p>
+                <h1 id="apacheexpress">ApacheExpress</h1>
+<p><a href="http://apacheexpress.io/"><strong>ApacheExpress</strong></a>
+is a way to rapidly write reliable and feature rich web applications
+in the <a href="http://swift.org/">Swift</a> programming language.
+Without ever leaving Xcode, or using the Swift Package Manager environment
+on Linux.
+<strong>ApacheExpress</strong> applications run directly within the 
+<a href="http://httpd.apache.org/">Apache WebServer</a>,
+as native Apache modules - without any interpreters or proxies.</p>
+<p><center><em>Server Side Swift the right way.</em></center></p>
+<p>ApacheExpress can be used alongside any other Apache module and hence can
+exploit the proven functionality of Apache.
+This includes pretty much any kind of authentication mechanism you can think of,
+rate limiting / anti-DoS modules, or
+mod_ssl to secure the web application as well as mod_h2 to provide
+<a href="http2/">HTTP/2 support</a>. 
+The latter are preconfigured when running ApacheExpress
+modules and provide full HTTP/2 access out of the box.</p>
+<h2 id="simple-example">Simple Example</h2>
+<p>Developing ApacheExpress applications use a Swift version of the mechanisms and
+APIs used by the <a href="http://expressjs.com">Express</a> framework.
+Hence its name. Example:</p>
+<pre><code class="swift">let app = apache.express(cookieParser(), session())
+
+app.get(&quot;/express/cookies&quot;) { req, res, _ in
+  try res.json(req.cookies)
+}
+
+app.get(&quot;/express/&quot;) { req, res, _ in
+  let values = [
+    &quot;viewCount&quot;   : req.session[&quot;viewCount&quot;] ?? 0,
+    &quot;cowOfTheDay&quot; : cows.vaca()
+  ]
+  try res.render(&quot;index&quot;, values)
+}
+</code></pre>
+
+<p>It grabs the application object representing the module,
+configures two builtin middleware objects (<code>cookieParser</code>, <code>session</code>)
+and then registers two <a href="routing/">routes</a>.
+The middleware attached to the <code>/express/cookies</code> route simply extracts all
+HTTP cookies set in the request and returns them as JSON.
+The other sets up a dictionary which is then rendered using a 
+<a href="templates/">Mustache template</a>.</p>
+<h2 id="database-access">Database Access</h2>
+<p>To provide access to a collection of SQL databases, including PostgreSQL and
+SQLite3, ApacheExpress uses the Apache <a href="mod_dbd/">mod_dbd</a> module.
+Apache is used to configure the database connection and Apache is maintaining
+the database connection pool.</p>
+<p>ApacheExpress then provides the <a href="mod_dbd/"><code>mod_dbd</code></a> middleware,
+which stacks the powerful <a href="http://zeeql.io/">ZeeQL</a> database access framework
+on top of Apache's module.</p>
+<h4 id="work-in-progress-stay-tuned">WORK IN PROGRESS, STAY TUNED</h4>
+<p>ApacheExpress is still being prepared. Please stay tuned for the release.
+If you want to stay up to date, subscribe to the blog
+on: <a href="http://apacheexpress.io/blog/">apacheexpress.io/blog/</a>.</p>
               
             </div>
           </div>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="install/" class="btn btn-neutral float-right" title="Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -139,7 +225,7 @@
       
       
       
-        <span style="margin-left: 15px"><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="install/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
@@ -150,5 +236,5 @@
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-06-05 11:14:32
+Build Date UTC : 2017-06-05 14:28:40
 -->
