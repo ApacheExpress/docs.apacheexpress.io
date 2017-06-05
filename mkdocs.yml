@@ -13,5 +13,10 @@ theme_dir:   custom_theme
 extra_css:   [ extra.css ]
 
 pages:
-  - 'Introduction': 'index.md'
-  - 'About':        'about.md'
+  - 'Introduction':         'index.md'
+  - 'Installation':         'install.md'
+  - 'Routing & Middleware': 'routing.md'
+  - 'Templates':            'templates.md'
+  - 'SQL Database Access':  'mod_dbd.md'
+  - 'HTTP/2':               'http2.md'
+  - 'About':                'about.md'
