@@ -156,12 +156,16 @@ custom install.</p>
 pretty much anywhere.</p>
 <h2 id="install-on-macos-using-homebrew">Install on macOS using Homebrew</h2>
 <p>Got no Homebrew? <a href="https://brew.sh">Get it!</a></p>
-<p>Before you install mod_swift, we highly recommend that you install or reinstall
-the Homebrew Apache w/ HTTP/2 and the MPM event module:</p>
+<p>Before installing ApacheExpress and mod_swift, it is strongly recommended that
+the Homebrew Apache 2.4 with HTTP/2 and the MPM event module is (re)installed:</p>
 <pre><code>brew tap homebrew/apache
 brew reinstall httpd24 --with-mpm-event --with-http2
 </code></pre>
-<p>You can also add <code>--with-privileged-ports</code> if you want to use such.</p>
+<p>The <code>--with-privileged-ports</code> option can be added if such are desired.</p>
+<p>If PostgreSQL access is needed:</p>
+<pre><code>brew reinstall apr-util --with-sqlite --with-postgresql
+</code></pre>
+<p>An optional <code>--with-openldap</code> enables LDAP support.</p>
 <p>Then add the mod_swift tap and install ApacheExpress:</p>
 <pre><code>brew tap modswift/mod_swift
 brew install apacheexpress
