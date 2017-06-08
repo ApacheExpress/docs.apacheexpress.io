@@ -14,13 +14,19 @@ pretty much anywhere.
 
 Got no Homebrew? [Get it!](https://brew.sh)
 
-Before you install mod_swift, we highly recommend that you install or reinstall
-the Homebrew Apache w/ HTTP/2 and the MPM event module:
+Before installing ApacheExpress and mod_swift, it is strongly recommended that
+the Homebrew Apache 2.4 with HTTP/2 and the MPM event module is (re)installed:
 
     brew tap homebrew/apache
     brew reinstall httpd24 --with-mpm-event --with-http2
+    
+The `--with-privileged-ports` option can be added if such are desired.
 
-You can also add `--with-privileged-ports` if you want to use such.
+If PostgreSQL access is needed:
+
+    brew reinstall apr-util --with-sqlite --with-postgresql
+    
+An optional `--with-openldap` enables LDAP support.
 
 Then add the mod_swift tap and install ApacheExpress:
 

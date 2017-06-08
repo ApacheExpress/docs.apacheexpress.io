@@ -54,4 +54,9 @@ PostgreSQL example:
 </IfModule>
 ```
 
+If you want to run PostgreSQL on Homebrew, make sure you have it installed,
+e.g.:
+
+    brew install apr-util --with-postgresql --with-sqlite
+
 > WORK IN PROGRESS, STAY TUNED
