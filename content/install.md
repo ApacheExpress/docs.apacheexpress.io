@@ -17,8 +17,7 @@ Got no Homebrew? [Get it!](https://brew.sh)
 Before installing ApacheExpress and mod_swift, it is strongly recommended that
 the Homebrew Apache 2.4 with HTTP/2 and the MPM event module is (re)installed:
 
-    brew tap homebrew/apache
-    brew reinstall httpd24 --with-mpm-event --with-http2
+    brew reinstall httpd --with-mpm-event --with-http2
     
 The `--with-privileged-ports` option can be added if such are desired.
 
