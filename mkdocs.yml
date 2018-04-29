@@ -1,9 +1,8 @@
 site_name:        ApacheExpress
 site_url:         http://apacheexpress.io/
 site_author:      ZeeZide GmbH
-copyright:        © ZeeZide GmbH 2017
+copyright:        © ZeeZide GmbH 2018
 repo_url:         https://github.com/apacheexpress/
-google_analytics: [ 'UA-3266252-11', 'apacheexpress.io' ]
   
 docs_dir:    content
 site_dir:    docs
