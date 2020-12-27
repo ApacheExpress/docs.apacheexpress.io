@@ -14,6 +14,10 @@ pretty much anywhere.
 
 Got no Homebrew? [Get it!](https://brew.sh)
 
+> UPDATE 2020-12-27: The Homebrew Apache doesn't seem to support the
+> `--with-http2` and `--with-mpm-event` options anymore.
+> Same for `--with-sqlite` and `--with-postgresql`.
+
 Before installing ApacheExpress and mod_swift, it is strongly recommended that
 the Homebrew Apache 2.4 with HTTP/2 and the MPM event module is (re)installed:
 
@@ -24,7 +28,7 @@ The `--with-privileged-ports` option can be added if such are desired.
 If PostgreSQL access is needed:
 
     brew reinstall apr-util --with-sqlite --with-postgresql
-    
+
 An optional `--with-openldap` enables LDAP support.
 
 Then add the mod_swift tap and install ApacheExpress:
