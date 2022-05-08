@@ -14,22 +14,12 @@ pretty much anywhere.
 
 Got no Homebrew? [Get it!](https://brew.sh)
 
-> UPDATE 2020-12-27: The Homebrew Apache doesn't seem to support the
-> `--with-http2` and `--with-mpm-event` options anymore.
-> Same for `--with-sqlite` and `--with-postgresql`.
+Install Apache2:
 
-Before installing ApacheExpress and mod_swift, it is strongly recommended that
-the Homebrew Apache 2.4 with HTTP/2 and the MPM event module is (re)installed:
+    brew install httpd
 
-    brew reinstall httpd --with-mpm-event --with-http2
-    
-The `--with-privileged-ports` option can be added if such are desired.
-
-If PostgreSQL access is needed:
-
-    brew reinstall apr-util --with-sqlite --with-postgresql
-
-An optional `--with-openldap` enables LDAP support.
+If PostgreSQL access is needed, APRUtil needs to be installed manually,
+it is not available as part of Homebrew anymore.
 
 Then add the mod_swift tap and install ApacheExpress:
 
@@ -58,8 +48,8 @@ the PostgreSQL and SQLite3 database adaptors, add additional ones as desired:
 Install mod_swift:
 
     curl -L -o mod_swift.tgz \
-         https://github.com/modswift/mod_swift/archive/0.8.5.tar.gz
-    tar zxf mod_swift.tgz && cd mod_swift-0.8.5
+         https://github.com/modswift/mod_swift/archive/0.9.2.tar.gz
+    tar zxf mod_swift.tgz && cd mod_swift-0.9.2
     make
     sudo make install
 
@@ -83,18 +73,22 @@ Those put things into `/usr/local`. If you want to have it in `/usr`, do:
 
 You can call `swift apache validate` to make sure the Apache installation is OK:
 
-    $ swift apache validate
-    The Swift Apache build environment looks sound.
-    
-    srcroot:   /Users/helge/dev/Swift/Apex3
-    module:    mods_Apex3
-    config:    debug
-    product:   /Users/helge/dev/Swift/Apex3/.build/mods_Apex3.so
-    apxs:      /usr/local/bin/apxs
-    mod_swift: /usr/local
-    swift:     3.1.0
-    cert:      self-signed-mod_swift-localhost-server.crt
-    http/2:    yes
+```
+$ swift apache validate
+swift-driver version: 1.45.2 The Swift Apache build environment looks sound.
+
+  srcroot:   /Users/helge/tmp/mods_helloworld
+  module:    mods_helloworld
+  config:    debug
+  product:   /Users/helge/tmp/mods_helloworld/.build/mods_helloworld.so
+  apxs:      /opt/homebrew/bin/apxs
+  moddir:    /opt/homebrew/lib/httpd/modules
+  relmoddir: /
+  mod_swift: /opt/homebrew/opt/mod_swift
+  swift:     5.6.0
+  cert:      self-signed-mod_swift-localhost-server.crt
+  http/2:    yes
+```
 
 ## Troubleshooting
 

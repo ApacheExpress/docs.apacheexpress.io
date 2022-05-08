@@ -105,6 +105,15 @@ Using that you can configure a SQL database connection within the
 <a href="https://github.com/AlwaysRightInstitute/mod_swift/blob/master/apache.conf#L79">Apache.conf</a>
 and use that within all your Apache modules/handlers.
 Apache does proper and reliable pooling and connection management.</p>
+<p>2019-08-14: Homebrew has removed support for apr-util DBD drivers except
+SQLite:
+<a href="https://github.com/Homebrew/homebrew-core/pull/31799/commits/584a9faa5c2decf32f25bb9d5f028395bb93ab5f">PR #31799</a>.
+To fix that, you can manually install <code>apr-util</code> with the <code>--with-pgsql</code>
+option (or any other driver you want to build).
+Then just hack-link the driver you want into the Homebrew install, e.g.:</p>
+<pre><code>pushd /usr/local//opt/apr-util/libexec/lib/apr-util-1/
+ln -s /usr/local/apr/lib/apr-util-1/apr_dbd_pgsql*.so .
+</code></pre>
 <p>ApacheExpress comes with the <code>mod_dbd</code> middleware which hooks up the Swift
 <a href="http://zeeql.io/">ZeeQL</a> database access toolkit with Apache.
 ZeeQL provides convenient low level database access as well as high level

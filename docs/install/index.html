@@ -114,20 +114,11 @@ custom install.</p>
 pretty much anywhere.</p>
 <h2 id="install-on-macos-using-homebrew">Install on macOS using Homebrew</h2>
 <p>Got no Homebrew? <a href="https://brew.sh">Get it!</a></p>
-<blockquote>
-<p>UPDATE 2020-12-27: The Homebrew Apache doesn't seem to support the
-<code>--with-http2</code> and <code>--with-mpm-event</code> options anymore.
-Same for <code>--with-sqlite</code> and <code>--with-postgresql</code>.</p>
-</blockquote>
-<p>Before installing ApacheExpress and mod_swift, it is strongly recommended that
-the Homebrew Apache 2.4 with HTTP/2 and the MPM event module is (re)installed:</p>
-<pre><code>brew reinstall httpd --with-mpm-event --with-http2
+<p>Install Apache2:</p>
+<pre><code>brew install httpd
 </code></pre>
-<p>The <code>--with-privileged-ports</code> option can be added if such are desired.</p>
-<p>If PostgreSQL access is needed:</p>
-<pre><code>brew reinstall apr-util --with-sqlite --with-postgresql
-</code></pre>
-<p>An optional <code>--with-openldap</code> enables LDAP support.</p>
+<p>If PostgreSQL access is needed, APRUtil needs to be installed manually,
+it is not available as part of Homebrew anymore.</p>
 <p>Then add the mod_swift tap and install ApacheExpress:</p>
 <pre><code>brew tap modswift/mod_swift
 brew install apacheexpress
@@ -148,8 +139,8 @@ sudo apt-get install \
 </code></pre>
 <p>Install mod_swift:</p>
 <pre><code>curl -L -o mod_swift.tgz \
-     https://github.com/modswift/mod_swift/archive/0.8.5.tar.gz
-tar zxf mod_swift.tgz &amp;&amp; cd mod_swift-0.8.5
+     https://github.com/modswift/mod_swift/archive/0.9.2.tar.gz
+tar zxf mod_swift.tgz &amp;&amp; cd mod_swift-0.9.2
 make
 sudo make install
 </code></pre>
@@ -171,17 +162,19 @@ sudo make debug=no  install
 <h2 id="check-whether-the-installation-is-ok">Check whether the installation is OK</h2>
 <p>You can call <code>swift apache validate</code> to make sure the Apache installation is OK:</p>
 <pre><code>$ swift apache validate
-The Swift Apache build environment looks sound.
+swift-driver version: 1.45.2 The Swift Apache build environment looks sound.
 
-srcroot:   /Users/helge/dev/Swift/Apex3
-module:    mods_Apex3
-config:    debug
-product:   /Users/helge/dev/Swift/Apex3/.build/mods_Apex3.so
-apxs:      /usr/local/bin/apxs
-mod_swift: /usr/local
-swift:     3.1.0
-cert:      self-signed-mod_swift-localhost-server.crt
-http/2:    yes
+  srcroot:   /Users/helge/tmp/mods_helloworld
+  module:    mods_helloworld
+  config:    debug
+  product:   /Users/helge/tmp/mods_helloworld/.build/mods_helloworld.so
+  apxs:      /opt/homebrew/bin/apxs
+  moddir:    /opt/homebrew/lib/httpd/modules
+  relmoddir: /
+  mod_swift: /opt/homebrew/opt/mod_swift
+  swift:     5.6.0
+  cert:      self-signed-mod_swift-localhost-server.crt
+  http/2:    yes
 </code></pre>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>If something isn't working in a Homebrew setup, check whether:</p>
